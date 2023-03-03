@@ -1,0 +1,41 @@
+.hero {
+    align-items: center;
+}
+
+.heroImage img {
+  height: 100vh;
+  width: 100%;
+}
+
+.image-heading {
+  color: #fff;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.image-heading h1 {
+  font-size: 40px;
+  text-transform: capitalize;
+}
+
+.image-heading button {
+  background: black;
+  color: white;
+  font-weight: 400;
+  word-spacing: 5px;
+  width: 100%;
+}
+
+.image-heading a {
+  color: #007bff;
+  cursor: pointer;
+}
+
+.image-heading span {
+  text-transform: capitalize;
+  word-spacing: 30px;
+}

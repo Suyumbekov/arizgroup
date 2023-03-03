@@ -1,0 +1,58 @@
+.products {
+  width: 100%;
+  background: #000000;
+  color: aliceblue;
+}
+
+.productHeading {
+  padding-top: 100px;
+  padding-bottom: 40px;
+  margin: 0 2rem;
+}
+
+.productHeading h1 {
+  font-weight: bold;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Tourney", cursive;
+  animation: slide-in-right 1s ease-in-out both;
+  text-transform: uppercase;
+}
+
+.productCard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  padding: 0 2rem;
+}
+
+.productCard a{
+    text-decoration: none;
+}
+
+.productCard h4 {
+  width: 100%;
+  font-size: 22px;
+  font-weight: 300;
+  color: #fff;
+  padding-bottom: 15px;
+  min-height: 80px;
+  text-decoration: none;
+}
+
+.productCard img {
+  max-width: 100%;
+  height: auto;
+}
+
+.productDescription p {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff;
+  padding: 80px 30px;
+  line-height: 22px;
+  letter-spacing: 1px;
+  font-family: "Poppins", sans-serif;
+}

@@ -1,0 +1,50 @@
+.aboutService {
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  padding: 100px 0;
+}
+
+.infoSide {
+    width: 60%;
+    padding: 30px;
+}
+
+.infoSide h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.infoSide p {
+    font-size: 14px;
+    font-weight: 300;
+    color: #000;
+    padding-top: 40px;
+    line-height: 30px;
+    letter-spacing: 1px;
+}
+
+.imageSide img {
+    max-width: 100%;
+    height: auto;
+    padding: 30px;
+}
+
+button {
+    width: 230px;
+    height: 58px;
+    border: 1px solid #000;
+    float: left;
+    margin-top: 30px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #000;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.aboutButton:hover {
+    background-color: #007bff;
+    transition: 0.5s all;
+    color: #fff;
+    border: 0;
+}
