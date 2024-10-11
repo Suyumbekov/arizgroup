@@ -1,0 +1,122 @@
+const [data, setData] = useState({
+    name: "",
+    number: "",
+    email: "",
+    file: "",
+  });
+  const handleData = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setData({ ...data, [name]: value });
+  };
+  const handleSend = async (e) => {
+    e.preventDefault();
+    // store the states in the form data
+    const loginFormData = new FormData();
+    loginFormData.append("name", data.name);
+    loginFormData.append("number", data.number);
+    loginFormData.append("email", data.email);
+    loginFormData.append("file", data.file);
+
+    try {
+      // make axios post request
+      const response = await fetch(
+        "https://mail-sender-dtxj.onrender.com/upload",
+        {
+          method: "post",
+          body: loginFormData,
+          headers: { "Content-Type": "multipart/form-data", "KEY": 512 },
+        }
+      );
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  // const [buttonText, setButtonText] = useState("Send");
+  // const [buttonClass, setButtonClass] = useState("");
+
+  // const handleClick = (e) => {
+  //   setButtonText("Thanks");
+  //   setButtonClass("active");
+  //   e.preventDefault();
+  // };
+
+
+
+
+  {/* <p>{data.name} {data.number} {data.email} {data.file} </p> */}
+            {/* <button id="btn" onClick={handleClick} className={buttonClass}>
+              <p id="btnText">{buttonText}</p>
+              <div className="check-box">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                  <path fill="transparent" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                </svg>
+              </div>
+            </button> */}
+
+
+
+
+            /* .contactus button{
+    width: 50%;
+    height: 40px;
+    border: none;
+    outline: none;
+    background: red;
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.check-box{
+    width: 60px;
+    height: 40px;
+    border-radius: 40px;
+    box-shadow: 0 0 12px -2px rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    right: -40px;
+    opacity: 0;
+}
+
+.check-box svg{
+    width: 40px;
+}
+
+svg path{
+    stroke-width: 3;
+    stroke: #fff;
+    stroke-dasharray: 34;
+    stroke-dashoffset: 34;
+    stroke-linecap: round;
+}
+
+.active{
+    background: #31af11;
+    transition: 1s;
+}
+
+.active .check-box{
+    right: 0;
+    opacity: 1;
+    transition: 1s;
+}
+
+.active p{
+    margin-right: 125px;
+    transition: 1s;
+    padding-left: 20%;
+
+}
+
+.active svg path{
+    stroke-dashoffset: 0;
+    transition: 1s;
+    transition-delay: 1s;
+} */

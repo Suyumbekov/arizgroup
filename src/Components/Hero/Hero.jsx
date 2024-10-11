@@ -1,50 +1,40 @@
-import React from "react";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
+import React, { useEffect } from "react";
 import "./hero.css";
-import "./slider.css";
+import { useTranslation } from "react-i18next";
+import i18next from "i18next";
 
 const Hero = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 200,
-    autoplay: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
+  const { t } = useTranslation(["hero"]);
+  useEffect(() => {
+    if (localStorage.getItem("i18nextLng"?.length >= 2)) {
+      i18next.changeLanguage("en");
+    }
+  }, []);
+
   return (
     <>
-      <div className="hero">
-        <Slider {...settings} className="slider">
-          <div>
-            <img
-              src="https://www.prologsupply.co.uk/tema/img/slider/1.jpg"
-              alt=""
-            />
-          </div>
-          <div>
-            <img
-              src="https://www.prologsupply.co.uk/tema/img/slider/2.jpg"
-              alt=""
-            />
-          </div>
-          <div>
-            <img
-              src="https://www.prologsupply.co.uk/tema/img/slider/4.jpg"
-              alt=""
-            />
-          </div>
-        </Slider>
+      <div className="hero" id="hero">
+        <div className="heroImage"></div>
         <div className="sliderCaption">
-          <div className="firstCaption">
-            <div className="line"></div>
-            <h1>ARIZ GROUP</h1>
-            <div className="line"></div>
+          <div className="left">
+            <div className="firstCaption">
+              <div className="line"></div>
+              <h1>ARIZ GROUP</h1>
+              <div className="line"></div>
+            </div>
+            <div className="secondCaption">
+              <p>YOUR SUPPLY CHAIN SOLUTIONS</p>
+            </div>
           </div>
-          <div className="secondCaption">
-           <p>Committed Your Success</p> 
+          <div className="right">
+            <div
+              className="description"
+              data-aos="fade-right"
+              data-aos-easing="linear"
+              data-aos-duration="1500"
+            >
+              <p>{t("description")}</p>
+            </div>
           </div>
         </div>
       </div>
