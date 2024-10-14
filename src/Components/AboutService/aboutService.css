@@ -10,6 +10,17 @@
   height: 150px;
   text-align: center;
   font-weight: bold;
+  padding: 100px;
+  background-color: #000;
+}
+
+.capsule {
+  width: 70%;
+  border: 1px solid;
+  border-radius: 100px 100px;
+  height: 150px;
+  text-align: center;
+  font-weight: bold;
   display: flex;
   justify-content: space-between;
   align-items: center;

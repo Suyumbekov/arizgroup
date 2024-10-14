@@ -1,7 +1,11 @@
 import i18next from "i18next";
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import i18next from "i18next";
+import React, { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import "./product.css";
+import "./slider.css";
 import "./slider.css";
 
 const Products = () => {
@@ -53,14 +57,41 @@ const Products = () => {
   return (
     <>
       <div className="products" id="products">
+      <div className="products" id="products">
         <div className="productHeading">
+          <h2 data-aos="fade-down" data-aos-duration="2000">
+            {t("productTitle")}
+          </h2>
           <h2 data-aos="fade-down" data-aos-duration="2000">
             {t("productTitle")}
           </h2>
         </div>
         <div className="productCard">
           {productData.map((value, i) => {
+          {productData.map((value, i) => {
             return (
+              <>
+                <div
+                  key={i}
+                  className="card"
+                  data-aos="flip-right"
+                  data-aos-duration="2000"
+                >
+                  <h4>{value.category}</h4>
+                  <img src={value.image} alt="" />
+                  {value.subCategory.map((categories, category) => {
+                    return (
+                      <div key={category}>
+                        <p>
+                          <i className="fa fa-dot-circle-o"></i>
+                          {categories}
+                        </p>
+                        <br />
+                      </div>
+                    );
+                  })}
+                </div>
+              </>
               <>
                 <div
                   key={i}
