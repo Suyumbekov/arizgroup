@@ -1,58 +1,131 @@
 .products {
   width: 100%;
-  background: #000000;
-  color: aliceblue;
+  background: #000;
+  color: #fff;
+  padding: 100px 40px;
 }
 
 .productHeading {
-  padding-top: 100px;
+  padding-top: 20px;
   padding-bottom: 40px;
   margin: 0 2rem;
 }
 
-.productHeading h1 {
+.productHeading h2 {
   font-weight: bold;
-  color: #fff;
-  font-size: 40px;
+  color: red;
+  font-size: 35px;
   font-weight: bold;
-  font-family: "Tourney", cursive;
-  animation: slide-in-right 1s ease-in-out both;
+  font-family: "Times New Roman", Times, serif;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .productCard {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-gap: 20px;
   padding: 0 2rem;
+  padding-bottom: 30px;
 }
 
-.productCard a{
-    text-decoration: none;
+.card {
+  border: 1px solid #fff;
+  box-shadow: #fff;
+  background-color: #131111;
+  border-radius: 20px;
+  box-shadow: 0 0 15px -5px white;
+  animation: ease-in-out;
+  transition: 0.5s !important;
 }
 
-.productCard h4 {
+.card:hover {
+  transform: scale(1.1);
+  transition: 0.5s !important;
+}
+
+.card h4 {
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
   font-size: 22px;
-  font-weight: 300;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
   color: #fff;
-  padding-bottom: 15px;
   min-height: 80px;
   text-decoration: none;
+  text-align: center;
 }
 
-.productCard img {
-  max-width: 100%;
-  height: auto;
+.card p {
+  padding: 10px 0 0 10px;
+  font-family: "Courier New", Courier, monospace;
 }
 
-.productDescription p {
+.card p:hover {
+  color: red;
+  transition: 0.5s;
+}
+
+.card p i {
+  color: red;
+  font-size: 12px;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.card img {
+  /* filter: blur(1px); */
   width: 100%;
-  font-size: 14px;
-  font-weight: 300;
-  color: #fff;
-  padding: 80px 30px;
-  line-height: 22px;
-  letter-spacing: 1px;
-  font-family: "Poppins", sans-serif;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  height: 100px;
+  object-fit: cover;
+}
+
+/* mobile */
+
+@media screen and (max-width: 780px) {
+  .productCard {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0;
+    gap: 50px;
+  }
+
+  .card {
+    height: 550px;
+  }
+
+  .productHeading {
+    padding-top: 0;
+  }
+
+  .productHeading h2 {
+    font-size: 25px;
+  }
+}
+
+/* tablet */
+
+@media screen and (min-width: 780px) and (max-width: 1024px) {
+  .productCard {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0;
+    gap: 50px;
+  }
+
+  .card {
+    height: 550px;
+  }
+
+  .productHeading {
+    padding-top: 0;
+  }
+
+  .productHeading h2 {
+    font-size: 25px;
+  }
 }

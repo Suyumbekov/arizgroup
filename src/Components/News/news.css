@@ -1,0 +1,61 @@
+.news {
+  width: 100%;
+  background: white;
+  color: black;
+  padding: 100px 40px;
+}
+
+.newsHeading {
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.slider-container {
+  width: 80%;
+  margin: auto;
+  padding: 40px 0;
+}
+
+.news-card-wrapper {
+  padding: 0 5px; /* Adds space between the cards */
+}
+
+.news-card {
+  background-color: #f5f7fa;
+
+  margin: 10px; /* Add margin for spacing between cards */
+  border-radius: 8px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  text-align: center;
+}
+
+.news-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.news-title {
+  padding: 0 20px 0 20px;
+  font-size: 1.2rem;
+  margin: 10px 0;
+  text-align: left;
+}
+
+.news-description {
+  padding: 0 20px 20px 20px;
+  font-size: 1rem;
+  color: black;
+  text-align: left;
+}
+
+.news .slick-dots li button::before {
+  color: #cccccc; /* Red color for the dots */
+}
+
+.news .slick-dots li.slick-active button:before {
+  color: #000000; /* Black for active dot */
+}

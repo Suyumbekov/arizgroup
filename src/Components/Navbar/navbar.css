@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Tourney:wght@300;400;500;600;700;800;900&display=swap");
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 9999;
+  height: 100px;
+  width: 100%;
+  padding-right: 10px;
+}
+
+nav.active {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 2px 28px 0 rgba(0 0 0 /6%);
+  width: 100%;
+  z-index: 1;
+}
+
+.logo {
+  width: 30%;
+  margin-left: 1%;
+}
+
+.logo img {
+  width: 50%;
+}
+
+.navbar ul {
+  display: flex;
+  width: 100%;
+  list-style: none;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 16px;
+  gap: 2rem;
+  text-transform: uppercase;
+}
+
+.navbar ul li a:hover {
+  color: red;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+li > a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+li > a::after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 3px;
+  width: 0;
+  top: 5px;
+  background: transparent;
+  transition: all 0.3s;
+}
+
+li > a:hover::after,
+li > a.active-nav::after {
+  width: 100%;
+  background: red;
+}
+
+.subMenu {
+  display: none;
+}
+
+.subMenu ul {
+  display: block;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.subMenu ul li a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+.navbar ul li:hover .subMenu {
+  display: block;
+  position: absolute;
+  background: #007bff;
+  color: #fff;
+  margin-top: 0;
+}
+
+.langs {
+  background-color: red;
+  text-align: center;
+  padding: 5px;
+  border-radius: 10px;
+  display: flex;
+}
+.langs hr {
+  height: 20px;
+  margin-top: 3px;
+}
+.langs button {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px;
+  transition: 0.3s linear;
+  border-radius: 10%;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.langs button:nth-child::after {
+  content: "";
+}
+
+.langs button.active {
+  color: #000;
+}
+
+button {
+  border: none;
+  background: none;
+  font-size: 24px;
+}
+
+.mobile-menu-icon {
+  display: none;
+}
+
+/* Mobile */
+
+@media screen and (max-width: 780px) {
+  .logo {
+    width: 80%;
+    margin-left: 1%;
+  }
+  .mobile-menu-icon {
+    color: #fff;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+
+  .mobile-menu-icon {
+    margin-top: 3px;
+  }
+
+  .navbar-mobile ul {
+    position: absolute;
+    display: block;
+    list-style: none;
+    left: 0;
+    margin-top: 50px;
+    height: 100vh;
+    transition: all 1s ease-in-out;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 1);
+  }
+
+  ul li {
+    padding: 32px;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    text-align: center;
+    line-height: 1px;
+    font-weight: bold;
+  }
+
+  li > a::after {
+    display: none;
+  }
+
+  li > a:hover {
+    color: red;
+    transition: 0.5s;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
+}
+
+/* tablet */
+
+@media screen and (min-width: 780px) and (max-width: 1024px) {
+  .navbar ul {
+    font-size: 12px;
+    gap: 1rem;
+  }
+}

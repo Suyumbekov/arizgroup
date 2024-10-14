@@ -1,0 +1,93 @@
+.footer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  background: #000;
+  font-weight: 300;
+  color: #fff;
+  padding: 80px 30px;
+  font-family: "Poppins", sans-serif;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.infoFooter {
+  border-right: 1px solid red;
+  height: 100%;
+}
+
+.infoFooter a:hover {
+  color: red;
+  transition: 0.5s;
+}
+.infoFooter a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.infoFooter i {
+  margin: 10px 10px;
+  line-height: 20px;
+}
+
+.address {
+  font-size: 14px;
+}
+
+/* contact form */
+.contactus {
+  margin: 0 50px;
+}
+
+.form input {
+  width: 70%;
+  height: 30px;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.btn button {
+  min-width: 8rem;
+  border-radius: 0.75rem;
+  min-height: 2.5rem;
+  background-color: red;
+  border: 0;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#btn {
+  color: #fff;
+}
+button:hover {
+  font-size: 18px;
+  transition: 0.5s;
+}
+
+/* mobile */
+
+@media screen and (max-width: 780px) {
+  .footer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .infoFooter {
+    border-right: 0;
+    border-bottom: 1px solid red;
+    margin-bottom: 20px;
+  }
+
+  .contactus {
+    margin: 20px 20px;
+  }
+
+  .contactus h2 {
+    font-size: 15px;
+  }
+
+  .form input {
+    width: 100%;
+  }
+  /* .contactus button {
+        width: 100%;
+    } */
+}

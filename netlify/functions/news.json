@@ -1,0 +1,13 @@
+[
+  {
+    "id": 1,
+    "title": "Initial News",
+    "content": "This is the first news article.",
+    "date": "2024-10-10"
+  },
+  {
+    "title": "Test1",
+    "content": "Content1",
+    "date": "2024-10-10"
+  }
+]
