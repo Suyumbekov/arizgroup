@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Slider from "react-slick";
 import "./news.css";
-import i18next, { t } from "i18next";
+import i18next from "i18next";
 import { useTranslation } from "react-i18next";
 
 const newsData = [
