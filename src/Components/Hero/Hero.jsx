@@ -19,7 +19,6 @@ const Hero = ({ host }) => {
     <>
       <div className="hero" id="hero">
         <div className="heroImage"></div>
-      <div className="hero" id="hero">
         <div className="heroImage"></div>
         <div className="sliderCaption">
           <div className="left">

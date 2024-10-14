@@ -1,13 +1,14 @@
 import { Suspense, useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"; // Import Router and Routes
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./Common/Navbar/Navbar";
-import Footer from "./Common/Footer/Footer";
-import Home from "./Pages/HomePage/Home";
-import About from "./Pages/AboutPage/About";
-import LogisticService from "./Pages/LogisticServicePage/LogisticService";
-import Contact from "./Pages/ContactPage/Contact";
+import AboutService from "./Components/AboutService/AboutService";
+import Brands from "./Components/Brands/Brands";
+import Footer from "./Components/Footer/Footer";
+import Hero from "./Components/Hero/Hero";
+import Navbar from "./Components/Navbar/Navbar";
+import Products from "./Components/Products/Products";
+import News from "./Components/News/News";
+import Login from "./Components/Auth/Login";
 
 function App() {
   const [host, setHost] = useState("arizg");
@@ -31,19 +32,29 @@ function App() {
     gtag("config", "G-C2EC5BDBC6");
   }, []);
   return (
-    <>
-      <Router>
-        <Navbar />
+    <Router>
+      <Suspense fallback={null}>
         <Routes>
-          <Route path="/" exact element={<Home/>}/>
-          <Route path="about" exact element={<About/>}/>
-          <Route path="procurement-logistics-services" exact element={<LogisticService/>}/>
-          <Route path="contact-us" exact element={<Contact/>}/>
+          {/* Define the routes */}
+          <Route
+            path="/"
+            element={
+              <>
+                <Navbar host={host} />
+                <Hero host={host} />
+                <News />
+                <Brands />
+                <Products />
+                <AboutService />
+                <Footer host={host} />
+              </>
+            }
+          />
+          {/* Route for authentication page */}
+          <Route path="/admin" element={<Login />} />
         </Routes>
-        <Footer />
-
-      </Router>
-    </>
+      </Suspense>
+    </Router>
   );
 }
 
