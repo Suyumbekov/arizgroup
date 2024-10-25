@@ -6,17 +6,13 @@ import { FaTimes } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 
-const Navbar = ({ host }) => {
-  const [logo, setLogo] = useState("logo_on_black.png");
+const Navbar = () => {
   const { i18n, t } = useTranslation(["navbar"]);
   useEffect(() => {
     if (localStorage.getItem("i18nextLng")?.length >= 2) {
       i18next.changeLanguage("en");
     }
-    if (host === "kambros") {
-      setLogo("kambros.png");
-    }
-  }, [host]);
+  }, []);
 
   const handleLanguageChange = (lang) => {
     i18n.changeLanguage(lang);
@@ -36,7 +32,7 @@ const Navbar = ({ host }) => {
     <>
       <nav className="nav" data-aos="fade-down">
         <div className="logo">
-          <img src={"./images/" + logo} alt="" />
+          <img src={"./images/logo_on_black.png"} alt="" />
         </div>
         <div
           className={mobile ? "navbar-mobile" : "navbar"}
@@ -49,7 +45,7 @@ const Navbar = ({ host }) => {
               </LinkRoll>
             </li>
             <li>
-              <LinkRoll to="brands" smooth={true} onClick={closeMobileMenu}>
+              <LinkRoll to="news" smooth={true} onClick={closeMobileMenu}>
                 {t("news")}
               </LinkRoll>
             </li>

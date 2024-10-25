@@ -1,0 +1,42 @@
+/* General container styling */
+.dealers {
+  padding: 50px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.dealersHeading h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Slider container */
+.dealers .slider-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* All slides */
+.dealers .slick-slide {
+  opacity: 0.5;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  z-index: 1;
+}
+
+/* Center slide zoom and bring to the front */
+.dealers .slick-center {
+  transform: scale(1.2);
+  opacity: 1;
+  z-index: 2; /* Ensures it stays on top of other slides */
+}
+
+/* Set a smaller width for non-centered slides */
+.dealers .slick-slide img {
+  width: 90%; /* Shrink surrounding slides a bit */
+  margin: 0 auto;
+}
+
+/* Centered slide is normal width */
+.dealers .slick-center img {
+  width: 100%;
+}

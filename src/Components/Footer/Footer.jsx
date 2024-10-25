@@ -63,14 +63,14 @@ const Footer = ({ host }) => {
             <i className="fa fa-phone-alt"></i>+996 (706) 939 779
           </a>
           <br />
-          <a href={"mailto: sales@" + host + ".com"}>
+          <a href={"mailto: sales@arizg.com"}>
             <i className="fa fa-envelope"></i>
-            {"sales@" + host + ".com"}
+            {"sales@arizg.com"}
           </a>
           <br />
-          <a href={"https://" + host + ".com"}>
+          <a href={"https://arizg.com"}>
             <i className="fa fa-globe"></i>
-            {"www." + host + ".com"}
+            {"www.arizg.com"}
           </a>
           <br />
           <a

@@ -10,17 +10,6 @@
   height: 150px;
   text-align: center;
   font-weight: bold;
-  padding: 100px;
-  background-color: #000;
-}
-
-.capsule {
-  width: 70%;
-  border: 1px solid;
-  border-radius: 100px 100px;
-  height: 150px;
-  text-align: center;
-  font-weight: bold;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -42,7 +31,7 @@
   height: 149px;
   display: block;
   border-radius: 0 100px 100px 0;
-  /* opacity: 0.7; */
+  opacity: 0.7;
   width: 300px;
 }
 
@@ -80,7 +69,7 @@
 
   .serviceImage {
     width: 100px;
-    /* opacity: 0.7; */
+    opacity: 0.7;
     height: 99px;
   }
 
@@ -110,7 +99,7 @@
 
   .serviceImage {
     width: 150px;
-    /* opacity: 0.7; */
+    opacity: 0.7;
     height: 129px;
   }
 

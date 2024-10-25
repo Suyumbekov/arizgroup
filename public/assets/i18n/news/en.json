@@ -1,3 +1,31 @@
 {
-  "newsTitle": "News"
+  "newsTitle": "News",
+  "news": [
+    {
+      "id": 1,
+      "description": "We are excited to announce the launch of our latest product. It offers cutting-edge features and exceptional performance.",
+      "media": "images/image1.jpg",
+      "date": "2024-10-24"
+    },
+
+    {
+      "id": 2,
+      "description": "Our company has reached a major milestone by expanding our operations to 50 countries worldwide.",
+      "media": "videos/demo.mp4",
+      "date": "2024-10-23"
+    },
+
+    {
+      "id": 3,
+      "description": "The recent charity event organized by our team was a huge success, raising over $100,000 for local communities.",
+      "media": "images/image2.jpg",
+      "date": "2024-10-22"
+    },
+    {
+      "id": 4,
+      "description": "Our company has reached a major milestone by expanding our operations to 50 countries worldwide.",
+      "media": "videos/demo.mp4",
+      "date": "2024-10-23"
+    }
+  ]
 }

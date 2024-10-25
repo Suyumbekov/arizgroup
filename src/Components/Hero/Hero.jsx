@@ -1,19 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "./hero.css";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 
-const Hero = ({ host }) => {
-  const [com, setCom] = useState("ARIZ GROUP");
+const Hero = () => {
   const { t } = useTranslation(["hero"]);
   useEffect(() => {
     if (localStorage.getItem("i18nextLng"?.length >= 2)) {
       i18next.changeLanguage("en");
     }
-    if (host === "kambros") {
-      setCom("KAMBROS LLC");
-    }
-  }, [host]);
+  }, []);
 
   return (
     <>
@@ -23,7 +19,7 @@ const Hero = ({ host }) => {
           <div className="left">
             <div className="firstCaption">
               <div className="line"></div>
-              <h1>{com}</h1>
+              <h1>ARIZ GROUP</h1>
               <div className="line"></div>
             </div>
             <div className="secondCaption">
@@ -37,7 +33,7 @@ const Hero = ({ host }) => {
               data-aos-easing="linear"
               data-aos-duration="1500"
             >
-              <p>{com + t("description")}</p>
+              <p>{"ARIZ GROUP" + t("description")}</p>
             </div>
           </div>
         </div>

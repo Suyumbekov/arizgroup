@@ -1,4 +1,4 @@
-import { Suspense, useEffect, useState } from "react";
+import { Suspense, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"; // Import Router and Routes
 import "./App.css";
 import AboutService from "./Components/AboutService/AboutService";
@@ -9,15 +9,10 @@ import Navbar from "./Components/Navbar/Navbar";
 import Products from "./Components/Products/Products";
 import News from "./Components/News/News";
 import Login from "./Components/Auth/Login";
+import Dealers from "./Components/Dealers/Dealers";
 
 function App() {
-  const [host, setHost] = useState("arizg");
-
   useEffect(() => {
-    if (window.location.hostname === "localhost") {
-      setHost("kambros");
-    }
-
     // Google Analytics script
     const script = document.createElement("script");
     script.src = `https://www.googletagmanager.com/gtag/js?id=G-C2EC5BDBC6`;
@@ -40,13 +35,14 @@ function App() {
             path="/"
             element={
               <>
-                <Navbar host={host} />
-                <Hero host={host} />
+                <Navbar />
+                <Hero />
                 <News />
                 <Brands />
+                <Dealers />
                 <Products />
                 <AboutService />
-                <Footer host={host} />
+                <Footer />
               </>
             }
           />

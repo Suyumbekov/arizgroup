@@ -6,8 +6,10 @@ import "./slider.css";
 
 const Products = () => {
   const { t } = useTranslation(["products"]);
+
   useEffect(() => {
-    if (localStorage.getItem("i18nextLng"?.length >= 2)) {
+    const language = localStorage.getItem("i18nextLng");
+    if (language?.length >= 2) {
       i18next.changeLanguage("en");
     }
   }, []);
@@ -45,9 +47,14 @@ const Products = () => {
     },
     {
       category: t("cardTitle5"),
-      image:
-        "https://images.squarespace-cdn.com/content/v1/579538a5725e254c7c86df4f/1524226731956-17Y87E3576BT2CTPXVDD/8-Dewalt_nail_guns.jpg",
-      subCategory: [t("sample"), t("sample2")],
+      image: "images/hydro.jpg",
+      subCategory: [
+        t("sample1"),
+        t("sample2"),
+        t("sample3"),
+        t("sample4"),
+        t("sample5"),
+      ],
     },
   ];
   return (
@@ -61,28 +68,26 @@ const Products = () => {
         <div className="productCard">
           {productData.map((value, i) => {
             return (
-              <>
-                <div
-                  key={i}
-                  className="card"
-                  data-aos="flip-right"
-                  data-aos-duration="2000"
-                >
-                  <h4>{value.category}</h4>
-                  <img src={value.image} alt="" />
-                  {value.subCategory.map((categories, category) => {
-                    return (
-                      <div key={category}>
-                        <p>
-                          <i className="fa fa-dot-circle-o"></i>
-                          {categories}
-                        </p>
-                        <br />
-                      </div>
-                    );
-                  })}
-                </div>
-              </>
+              <div
+                key={i}
+                className="card"
+                data-aos="flip-right"
+                data-aos-duration="2000"
+              >
+                <h4>{value.category}</h4>
+                <img src={value.image} alt="" />
+                {value.subCategory.map((categories, category) => {
+                  return (
+                    <div key={category}>
+                      <p>
+                        <i className="fa fa-dot-circle-o"></i>
+                        {categories}
+                      </p>
+                      <br />
+                    </div>
+                  );
+                })}
+              </div>
             );
           })}
         </div>
