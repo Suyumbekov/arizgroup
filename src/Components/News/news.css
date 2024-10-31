@@ -38,6 +38,13 @@
   border-radius: 4px;
 }
 
+.news-title {
+  padding: 0 20px;
+  margin-top: 10px;
+  color: black;
+  text-align: center;
+}
+
 .news-description {
   padding: 0 20px 20px 20px;
   margin-top: 10px;

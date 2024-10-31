@@ -18,7 +18,7 @@ const News = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3, // Number of cards to show at once
+    slidesToShow: 2, // Number of cards to show at once
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 1300,
@@ -61,6 +61,7 @@ const News = () => {
                     Your browser does not support the video tag.
                   </video>
                 )}
+                <h3 className="news-title">{newsItem.title}</h3>
                 <p className="news-description">{newsItem.description}</p>
                 <p className="news-date">{newsItem.date}</p>
               </div>
