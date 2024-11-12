@@ -31,7 +31,7 @@ const News = () => {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 725,
         settings: {
           slidesToShow: 1,
         },
