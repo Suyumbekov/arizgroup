@@ -6,9 +6,9 @@ function Dealers() {
   const settings = {
     className: "center",
     centerMode: true,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 1200,
+    // infinite: true,
+    // autoplay: true,
+    // autoplaySpeed: 1200,
     centerPadding: "60px",
     slidesToShow: 3,
     speed: 800,

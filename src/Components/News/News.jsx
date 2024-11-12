@@ -51,16 +51,21 @@ const News = () => {
           {t("news", { returnObjects: true }).map((newsItem) => (
             <div key={newsItem.id} className="news-card-wrapper">
               <div className="news-card">
-                {/* Check if media is an image or video */}
-                {newsItem.media.endsWith(".jpg") ||
-                newsItem.media.endsWith(".png") ? (
-                  <img src={newsItem.media} alt="news" className="news-image" />
-                ) : (
-                  <video controls className="news-video news-image">
-                    <source src={newsItem.media} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                )}
+                <div className="news-images">
+                  {newsItem.media && Array.isArray(newsItem.media)
+                    ? newsItem.media.map((mediaUrl, index) => (
+                        <img
+                          key={index}
+                          src={mediaUrl}
+                          alt="news"
+                          className={`news-image ${newsItem.class} ${
+                            newsItem.media.length === 1 ? "single" : "double"
+                          }`}
+                        />
+                      ))
+                    : null}
+                </div>
+
                 <h3 className="news-title">{newsItem.title}</h3>
                 <p className="news-description">{newsItem.description}</p>
                 <p className="news-date">{newsItem.date}</p>
