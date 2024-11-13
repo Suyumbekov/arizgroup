@@ -79,7 +79,7 @@ const Companies = () => {
           data-aos="fade-down"
           data-aos-duration="2000"
         >
-          {t("companiestTitle")}
+          {t("companiesTitle")}
         </h2>
         <Slider {...settings}>
           {items.map((item) => (
