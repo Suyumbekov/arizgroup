@@ -41,9 +41,9 @@ function Dealers() {
   return (
     <div className="dealers">
       <div className="dealersHeading">
-        <h1 data-aos="fade-down" data-aos-duration="2000">
+        <h2 data-aos="fade-down" data-aos-duration="2000">
           {t("dealersTitle")}
-        </h1>
+        </h2>
       </div>
       <div className="slider-container">
         <Slider {...settings}>
