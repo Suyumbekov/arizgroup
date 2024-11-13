@@ -39,7 +39,7 @@ function Dealers() {
     ],
   };
   return (
-    <div className="dealers">
+    <div className="dealers" id="dealers">
       <div className="dealersHeading">
         <h2 data-aos="fade-down" data-aos-duration="2000">
           {t("dealersTitle")}

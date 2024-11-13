@@ -55,6 +55,11 @@ const Navbar = () => {
               </LinkRoll>
             </li>
             <li>
+              <LinkRoll to="dealers" smooth={true} onClick={closeMobileMenu}>
+                {t("dealers")}
+              </LinkRoll>
+            </li>
+            <li>
               <LinkRoll to="products" smooth={true} onClick={closeMobileMenu}>
                 {t("products")}
               </LinkRoll>

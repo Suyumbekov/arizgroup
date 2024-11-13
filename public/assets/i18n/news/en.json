@@ -33,7 +33,7 @@
       "description": "We are proudly announcing the successful supply of 1-meter diameter steel pipes for the Tugol-Sai water reservoir project. These high-quality pipes are crucial for ensuring the efficiency and durability of the water supply infrastructure. We extend our sincere gratitude to the project team for their trust in our products and services. We are honored to be part of this important project and are committed to delivering reliable, top-notch materials. We are excited to see the positive impact of this project and look forward to further collaboration in the future.",
       "media": ["images/reservoir.jpeg"],
       "date": "#",
-      "class": ""
+      "class": "cover"
     },
     {
       "id": 5,
@@ -55,7 +55,7 @@
       "id": 6,
       "title": "Successful Supply and Commissioning of Laboratory Equipment at Manas University",
       "description": "We are pleased to announce the successful supply, commissioning, and installation of laboratory equipment at Manas University. This delivery includes cutting-edge scientific instruments, and our team also provided comprehensive training to faculty and staff to ensure effective usage. We extend our sincere gratitude to Manas University for their trust in our services and are committed to delivering high-quality, reliable support. This partnership marks the beginning of a promising collaboration, and we look forward to a long-term relationship that enhances academic and research capabilities at the university.",
-      "media": ["images/manas.png"],
+      "media": ["images/manas2.png"],
       "date": "September 2024",
       "class": ""
     }

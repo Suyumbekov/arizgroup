@@ -20,15 +20,14 @@
 }
 
 .news-card-wrapper {
-  padding: 0 5px; /* Adds space between the cards */
+  padding: 0 5px;
 }
 
 .news-card {
   background-color: #f5f7fa;
-
-  margin: 10px; /* Add margin for spacing between cards */
+  height: 500px;
+  margin: 10px;
   border-radius: 8px;
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
   text-align: center;
 }
 
@@ -40,7 +39,7 @@
 .news-image {
   box-sizing: border-box;
   height: 160px;
-  border-radius: 4px; /* Optional: Rounded corners for images */
+  border-radius: 4px;
 }
 
 .news-image.single {
