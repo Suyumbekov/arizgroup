@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./companies.css";
+import { useTranslation } from "react-i18next";
+import i18next from "i18next";
 
 const Companies = () => {
+  const { t } = useTranslation(["companies"]);
+
+  useEffect(() => {
+    const language = localStorage.getItem("i18nextLng");
+    if (language?.length >= 2) {
+      i18next.changeLanguage("en");
+    }
+  }, []);
+
   const settings = {
     dots: false,
     infinite: true,
@@ -63,7 +74,13 @@ const Companies = () => {
   return (
     <div className="wrapper">
       <div className="carousel-container">
-        <h2 className="companies-title">Companies we work with:</h2>
+        <h2
+          className="companies-title"
+          data-aos="fade-down"
+          data-aos-duration="2000"
+        >
+          {t("companiestTitle")}
+        </h2>
         <Slider {...settings}>
           {items.map((item) => (
             <div key={item.id} className="carousel-item">

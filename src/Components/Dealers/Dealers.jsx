@@ -1,14 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Slider from "react-slick";
 import "./dealers.css";
+import i18next from "i18next";
+import { useTranslation } from "react-i18next";
 
 function Dealers() {
+  const { t } = useTranslation(["companies"]);
+
+  useEffect(() => {
+    const language = localStorage.getItem("i18nextLng");
+    if (language?.length >= 2) {
+      i18next.changeLanguage("en");
+    }
+  }, []);
+
   const settings = {
     className: "center",
     centerMode: true,
-    // infinite: true,
-    // autoplay: true,
-    // autoplaySpeed: 1200,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 1200,
     centerPadding: "60px",
     slidesToShow: 3,
     speed: 800,
@@ -31,7 +42,7 @@ function Dealers() {
     <div className="dealers">
       <div className="dealersHeading">
         <h1 data-aos="fade-down" data-aos-duration="2000">
-          WE ARE DEALERS OF COMPANIES:
+          {t("dealersTitle")}
         </h1>
       </div>
       <div className="slider-container">
