@@ -10,6 +10,7 @@ import Products from "./Components/Products/Products";
 import News from "./Components/News/News";
 import Login from "./Components/Auth/Login";
 import Dealers from "./Components/Dealers/Dealers";
+import Companies from "./Components/Companies/Companies";
 
 function App() {
   useEffect(() => {
@@ -41,6 +42,7 @@ function App() {
                 <Brands />
                 <Dealers />
                 <Products />
+                <Companies />
                 <AboutService />
                 <Footer />
               </>

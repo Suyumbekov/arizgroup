@@ -21,7 +21,7 @@ const News = () => {
     slidesToShow: 2, // Number of cards to show at once
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 1300,
+    autoplaySpeed: 1500,
     cssEase: "linear",
     responsive: [
       {
