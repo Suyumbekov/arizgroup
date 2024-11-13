@@ -18,20 +18,20 @@ const News = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 2, // Number of cards to show at once
+    slidesToShow: 3, // Number of cards to show at once
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 1500,
+    autoplaySpeed: 2200,
     cssEase: "linear",
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 900,
         settings: {
           slidesToShow: 2,
         },
       },
       {
-        breakpoint: 725,
+        breakpoint: 625,
         settings: {
           slidesToShow: 1,
         },

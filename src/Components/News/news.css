@@ -13,7 +13,6 @@
 }
 
 .slider-container {
-  width: 80%;
   margin: auto;
   padding: 40px 0;
 }
@@ -85,4 +84,10 @@
 
 .news .slick-dots li.slick-active button:before {
   color: #000000; /* Black for active dot */
+}
+
+@media screen and (max-width: 625px) and (min-width: 500px) {
+  .slider-container {
+    width: 80%;
+  }
 }
