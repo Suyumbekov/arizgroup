@@ -5,6 +5,7 @@
 .companies-title {
   font-weight: bold;
   color: red;
+  font-size: 35px;
   font-weight: bold;
   font-family: "Times New Roman", Times, serif;
   text-transform: uppercase;
@@ -39,4 +40,10 @@
   color: white;
   word-wrap: break-word;
   margin-top: 5px;
+}
+
+@media screen and (max-width: 1024px) {
+  .companies-title {
+    font-size: 25px;
+  }
 }

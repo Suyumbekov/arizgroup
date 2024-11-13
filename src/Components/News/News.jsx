@@ -42,9 +42,9 @@ const News = () => {
   return (
     <div className="news">
       <div className="newsHeading">
-        <h1 data-aos="fade-down" data-aos-duration="2000">
+        <h2 data-aos="fade-down" data-aos-duration="2000">
           {t("newsTitle")}
-        </h1>
+        </h2>
       </div>
       <div className="slider-container">
         <Slider {...settings}>

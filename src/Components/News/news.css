@@ -5,11 +5,13 @@
   padding: 100px 40px;
 }
 
-.newsHeading {
+.newsHeading h2 {
   color: red;
+  font-size: 35px;
   text-align: center;
   font-weight: bold;
   font-family: "Times New Roman", Times, serif;
+  text-transform: uppercase;
 }
 
 .slider-container {
@@ -84,6 +86,12 @@
 
 .news .slick-dots li.slick-active button:before {
   color: #000000; /* Black for active dot */
+}
+
+@media screen and (max-width: 1024px) {
+  .newsHeading h2 {
+    font-size: 25px;
+  }
 }
 
 @media screen and (max-width: 625px) and (min-width: 500px) {
