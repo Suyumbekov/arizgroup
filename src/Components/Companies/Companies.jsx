@@ -19,9 +19,9 @@ const Companies = () => {
   const settings = {
     dots: false,
     infinite: true,
-    autoplay: false,
-    speed: 2000,
-    autoplaySpeed: 2000,
+    autoplay: true,
+    speed: 800,
+    autoplaySpeed: 1200,
     slidesToShow: 5,
     slidesToScroll: 1,
     responsive: [
