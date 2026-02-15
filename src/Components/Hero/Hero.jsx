@@ -2,8 +2,11 @@ import React, { useEffect } from "react";
 import "./hero.css";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
+import { getBranding } from "../../domainConfig";
 
 const Hero = () => {
+  const branding = getBranding();
+
   const { t } = useTranslation(["hero"]);
   useEffect(() => {
     if (localStorage.getItem("i18nextLng"?.length >= 2)) {
@@ -19,7 +22,7 @@ const Hero = () => {
           <div className="left">
             <div className="firstCaption">
               <div className="line"></div>
-              <h1>ARIZ GROUP</h1>
+              <h1>{branding.name}</h1>
               <div className="line"></div>
             </div>
             <div className="secondCaption">
@@ -33,7 +36,7 @@ const Hero = () => {
               data-aos-easing="linear"
               data-aos-duration="1500"
             >
-              <p>{"ARIZ GROUP" + t("description")}</p>
+              <p>{branding.name + t("description")}</p>
             </div>
           </div>
         </div>

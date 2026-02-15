@@ -21,11 +21,13 @@
 
 .news-card-wrapper {
   padding: 0 5px;
+  height: 100%;
 }
 
 .news-card {
   background-color: #f5f7fa;
-  height: 500px;
+
+  /* max-height: 700px; */
   margin: 10px;
   border-radius: 8px;
   text-align: center;
@@ -93,8 +95,28 @@
   }
 }
 
+@media screen and (max-width: 900px) {
+  .newsHeading h2 {
+    font-size: 25px;
+  }
+}
+
 @media screen and (max-width: 625px) and (min-width: 500px) {
   .slider-container {
     width: 80%;
   }
 }
+
+/* responsive: [
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 625,
+        settings: {
+          slidesToShow: 1,
+        },
+      }, */

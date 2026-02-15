@@ -16,8 +16,7 @@ const Products = () => {
   const productData = [
     {
       category: t("cardTitle1"),
-      image:
-        "http://resources.perkinelmer.com/lab-solutions/resources/images_for_resize/CHEMICALS_FINE_CHEMICALS_1310x300.jpg",
+      image: "images/products/chemicals.jpg",
       subCategory: [
         t("chemicals1"),
         t("chemicals2"),
@@ -29,25 +28,22 @@ const Products = () => {
     },
     {
       category: t("cardTitle2"),
-      image:
-        "https://im-mining.com/site/wp-content/uploads/2023/02/UGM-announcement-tires-604x270.png",
+      image: "images/products/mining-machinery.jpg",
       subCategory: [t("machinary1"), t("machinary2")],
     },
     {
       category: t("cardTitle3"),
-      image:
-        "https://www.suprasteel.net/wp-content/uploads/2016/12/foto-bolas-fundidas-2.jpg",
+      image: "images/products/fundidas.jpg",
       subCategory: [t("supply1"), t("supply2"), t("supply3"), t("supply4")],
     },
     {
       category: t("cardTitle4"),
-      image:
-        "https://images.squarespace-cdn.com/content/v1/579538a5725e254c7c86df4f/1524226731956-17Y87E3576BT2CTPXVDD/8-Dewalt_nail_guns.jpg",
+      image: "images/products/dewalt.jpg",
       subCategory: [t("product1"), t("product2"), t("product3"), t("product4")],
     },
     {
       category: t("cardTitle5"),
-      image: "images/hydro.jpg",
+      image: "images/products/hydro.jpg",
       subCategory: [
         t("sample1"),
         t("sample2"),

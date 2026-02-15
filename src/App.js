@@ -11,9 +11,16 @@ import News from "./Components/News/News";
 import Login from "./Components/Auth/Login";
 import Dealers from "./Components/Dealers/Dealers";
 import Companies from "./Components/Companies/Companies";
+import { getBranding } from "./domainConfig";
 
 function App() {
   useEffect(() => {
+    // Set the branding when the component mounts
+    const branding = getBranding();
+
+    // Optional: Update page title dynamically
+    document.title = branding.title;
+
     // Google Analytics script
     const script = document.createElement("script");
     script.src = `https://www.googletagmanager.com/gtag/js?id=G-C2EC5BDBC6`;

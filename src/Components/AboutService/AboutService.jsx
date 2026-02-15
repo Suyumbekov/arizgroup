@@ -22,7 +22,7 @@ const AboutService = () => {
           <div className="capsule" data-aos="fade-right">
             <p className="capsuleInfo">{t("qualityAssurance")}</p>
             <img
-            alt="serviceImage"
+              alt="serviceImage"
               className="serviceImage"
               src="https://habiskerja.com/wp-content/uploads/2022/12/Improving-Your-Software-Quality-Assurance-Process-in-2021.webp"
             ></img>
@@ -55,7 +55,7 @@ const AboutService = () => {
             <p className="capsuleInfo">{t("productQuality")}</p>
             <img
               className="serviceImage"
-              src="https://www.goldenhaven.com.ph/wp-content/uploads/2022/02/Different-Steps-of-Product-Quality-Management.jpg"
+              src="images/aboutService/management.jpg"
               alt="serviceImage"
             />
           </div>

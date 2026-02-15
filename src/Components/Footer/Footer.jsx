@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import "./footer.css";
 import emailjs from "@emailjs/browser";
+import { getBranding } from "../../domainConfig";
 
 const Result = () => {
   const { t } = useTranslation(["footer"]);
@@ -15,6 +16,7 @@ const Result = () => {
 };
 
 const Footer = ({ host }) => {
+  const branding = getBranding();
   const { t } = useTranslation(["footer"]);
   useEffect(() => {
     if (localStorage.getItem("i18nextLng"?.length >= 2)) {
@@ -33,7 +35,7 @@ const Footer = ({ host }) => {
         "service_raut70v",
         "template_mi1g8pr",
         form.current,
-        "63gran-wYufAKjYNK"
+        "63gran-wYufAKjYNK",
       )
       .then(
         (result) => {
@@ -41,7 +43,7 @@ const Footer = ({ host }) => {
         },
         (error) => {
           console.log(error.text);
-        }
+        },
       );
     e.target.reset();
     showResult(true);
@@ -68,9 +70,9 @@ const Footer = ({ host }) => {
             {"sales@arizg.com"}
           </a>
           <br />
-          <a href={"https://arizg.com"}>
+          <a href={`https://${branding.title}.com`}>
             <i className="fa fa-globe"></i>
-            {"www.arizg.com"}
+            {`www.${branding.title}.com`}
           </a>
           <br />
           <a
