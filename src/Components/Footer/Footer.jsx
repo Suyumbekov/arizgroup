@@ -70,9 +70,9 @@ const Footer = ({ host }) => {
             {"sales@arizg.com"}
           </a>
           <br />
-          <a href={`https://${branding.title}.com`}>
+          <a href={`https://${branding.site}.com`}>
             <i className="fa fa-globe"></i>
-            {`www.${branding.title}.com`}
+            {`www.${branding.site}.com`}
           </a>
           <br />
           <a

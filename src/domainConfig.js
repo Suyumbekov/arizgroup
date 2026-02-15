@@ -7,11 +7,13 @@ export const getBranding = () => {
     return {
       title: "Kambros",
       name: "KAMBROS",
+      site: "kambros",
     };
   }
 
   return {
     title: "Ariz Group",
     name: "ARIZ GROUP",
+    site: "arizg",
   };
 };
