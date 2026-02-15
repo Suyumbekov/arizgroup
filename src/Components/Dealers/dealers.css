@@ -30,7 +30,9 @@
 
 .dealers .slick-slide {
   opacity: 0.5;
-  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
 }
 
 .dealers .slick-center {
@@ -41,10 +43,11 @@
 }
 
 .dealers .slick-slide img {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 }
 
-.dealers .slick-center img {
-  width: 100%;
+.dealers .slick-center {
+  transform: scale(1.15);
+  opacity: 1;
 }
